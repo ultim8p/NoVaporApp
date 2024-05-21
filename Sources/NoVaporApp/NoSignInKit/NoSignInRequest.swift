@@ -10,5 +10,5 @@ import Vapor
 
 public final class NoSignInRequest: Content {
     
-    var apple: NoSignInRequestApple?
+    public var apple: NoSignInRequestApple?
 }

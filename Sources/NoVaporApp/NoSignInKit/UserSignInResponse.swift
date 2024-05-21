@@ -14,7 +14,7 @@ public final class UserSignInResponse: Content {
     
     var credentials: ClientCredentials?
     
-    init(user: User? = nil, credentials: ClientCredentials? = nil) {
+    public init(user: User? = nil, credentials: ClientCredentials? = nil) {
         self.user = user
         self.credentials = credentials
     }

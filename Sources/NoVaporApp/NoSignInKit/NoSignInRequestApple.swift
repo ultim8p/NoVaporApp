@@ -8,19 +8,19 @@
 import Foundation
 import Vapor
 
-final class NoSignInRequestApple: Content {
+public final class NoSignInRequestApple: Content {
     
-    var dateCreated: Date?
+    public var dateCreated: Date?
     
-    var dateUpdated: Date?
+    public var dateUpdated: Date?
     
-    var identityToken: Data?
+    public var identityToken: Data?
     
-    var authorizationCode: Data?
+    public var authorizationCode: Data?
     
-    var realUserStatus: String?
+    public var realUserStatus: String?
     
-    var user: String?
+    public var user: String?
     
-    var email: String?
+    public var email: String?
 }
