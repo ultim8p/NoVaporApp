@@ -22,6 +22,8 @@ public final class ClientApp: Content, DBCollectionable, Credentialable {
     
     public var identifier: String?
     
+    public var appleIdentifier: String?
+    
     public static var entityName: String = "clientApp"
     
     public init(_id: ObjectId? = nil, dateCreated: Date? = nil, dateUpdated: Date? = nil, identifier: String? = nil) {
