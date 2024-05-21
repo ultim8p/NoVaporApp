@@ -76,6 +76,7 @@ public extension Content {
         
         let headers = try server.requestAuthHeaders(headers: headers, credentials: authCredentials)
         let uri = server.uri(path: path)
+        
         return try await self.post(
             client,
             uri: uri,

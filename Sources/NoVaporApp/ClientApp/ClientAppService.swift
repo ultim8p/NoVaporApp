@@ -13,9 +13,15 @@ import NoVaporError
 
 public final class ClientAppService {
     
+    public init() {
+        
+    }
+    
     // MARK: - CREATE
     
-    public func createApp(db: MongoDatabase, app: ClientApp, clientAppIdentifier: String) async throws -> (
+    // Pass server serverId as serverId parameter.
+    // ClientApp is the app which will be using this app ex: iOS app
+    public func createApp(db: MongoDatabase, app: ClientApp, serverId: String) async throws -> (
         client: ClientCredentials,
         app: ClientApp
     ) {
@@ -32,7 +38,7 @@ public final class ClientAppService {
             entity: AuthCredentialsType.app.rawValue,
             deviceName: "",
             serverAppIdentifier: appIdentifier,
-            clientAppIdentifier: clientAppIdentifier
+            clientAppIdentifier: serverId
         )
         
         try await app.save(in: db)

@@ -10,17 +10,17 @@ import NoVaporError
 public final class NoVaporApp {
     
     // Server App Id: Ex: "cloud.noVaporApp"
-    let app: Application
+    public let app: Application
     
-    var authMiddleware: AuthCredentialsMiddleware?
+    public var authMiddleware: AuthCredentialsMiddleware?
     
-    var authRoutes: RoutesBuilder?
+    public var authRoutes: RoutesBuilder?
     
-    let appId: String
+    public let appId: String
     
-    var noSignInKit: NoSignInKit?
+    public var noSignInKit: NoSignInKit?
     
-    init(appId: String, app: Application) {
+    public init(appId: String, app: Application) {
         self.appId = appId
         self.app = app
         
@@ -29,7 +29,7 @@ public final class NoVaporApp {
     }
     
     // App authentication is required
-    func registerAuthRoutes(_ routes: RoutesBuilder) {
+    public func registerAuthRoutes(_ routes: RoutesBuilder) {
         let authMiddleware = AuthCredentialsMiddleware(authClosure: handleAuthenticatedObject)
         self.authMiddleware = authMiddleware
         
@@ -41,8 +41,9 @@ public final class NoVaporApp {
         serverSignInController.registerAuthRoutes(authRoutes)
     }
     
-    func addUserSignIn(serverRepo: ServerRepo) {
+    public func addUserSignIn(serverRepo: ServerRepo, authRoutes: RoutesBuilder) {
         noSignInKit = NoSignInKit(appId: appId, client: app.client, serverRepo: serverRepo)
+        noSignInKit?.registerAuthRoutes(authRoutes)
     }
 }
 
