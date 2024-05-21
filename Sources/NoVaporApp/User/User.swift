@@ -60,10 +60,11 @@ public extension User {
 
 public extension User {
     
-    static func build(user: User) throws -> User {
+    static func build(user: User? = nil) throws -> User {
         let usr = User()
         usr.makeDefault()
-        usr._id = user._id
+        usr._id = user?._id
+        usr.makeDefault()
         try usr.validateValues()
         return usr
     }
