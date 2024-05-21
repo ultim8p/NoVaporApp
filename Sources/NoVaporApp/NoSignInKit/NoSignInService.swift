@@ -21,7 +21,7 @@ public final class NoSignInService {
     let serverRepo: ServerRepo
     
     enum Paths {
-        static let v1SignIn = "/v1/user/signin"
+        static let v1SignIn = "/v1/nosignin/signin"
     }
     
     init( appId: String, client: Client, serverRepo: ServerRepo) {
