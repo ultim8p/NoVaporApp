@@ -19,7 +19,8 @@ final class NoSignInController {
     
     func registerAuthRoutes(_ routes: RoutesBuilder) {
         let v1 = routes.grouped("v1")
-        let v1SignIn = v1.grouped("signin")
+        let v1Server = v1.grouped("server")
+        let v1SignIn = v1Server.grouped("signin")
         
         // MARK: POST
         

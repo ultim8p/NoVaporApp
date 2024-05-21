@@ -37,7 +37,7 @@ public extension User {
                 db: db,
                 headers: headers,
                 server: server,
-                path: "/v1/signin")
+                path: "/v1/server/signin")
             guard let signedInCredentials = response.credentials
             else { throw NoError.noServerApp(reason: "Failed to create object", code: .creation, fields: [server.identifier]) }
             try await signedInCredentials.save(in: db)
