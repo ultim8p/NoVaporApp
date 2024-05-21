@@ -41,7 +41,7 @@ public extension User {
     }
 }
 
-extension User {
+public extension User {
     
     func makeDefault() {
         if _id == nil { _id = ObjectId() }
@@ -50,7 +50,7 @@ extension User {
     }
 }
 
-extension User {
+public extension User {
     
     func validateValues() throws {
         guard _id != nil, dateCreated != nil, dateUpdated != nil
@@ -58,7 +58,7 @@ extension User {
     }
 }
 
-extension User {
+public extension User {
     
     static func build(user: User) throws -> User {
         let usr = User()
