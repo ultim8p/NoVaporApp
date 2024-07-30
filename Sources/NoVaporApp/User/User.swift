@@ -20,6 +20,8 @@ public final class User: Content, DBCollectionable, Credentialable {
     
     public var dateUpdated: Date?
     
+    public var email: String?
+    
     public static var entityName: String = "user"
     
     public init(
