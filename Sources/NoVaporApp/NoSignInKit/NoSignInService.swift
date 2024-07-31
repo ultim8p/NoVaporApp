@@ -54,6 +54,12 @@ public final class NoSignInService {
 private extension NoSignInService {
     
     func signIn(db: MongoDatabase, request: NoSignInRequest, headers: HTTPHeaders) async throws -> UserSignInResponse {
-        return try await request.post(client: client, db: db, headers: headers, server: serverRepo, path: Paths.v1SignIn)
+        return try await request.post(
+            client: client,
+            db: db,
+            headers: headers,
+            server: serverRepo,
+            path: Paths.v1SignIn
+        )
     }
 }

@@ -32,6 +32,7 @@ public extension Content {
         user: User? = nil,
         headers: HTTPHeaders,
         server: ServerRepo,
+        timeout: Int64 = 60,
         path: CustomStringConvertible
     ) async throws -> T {
         var authCredentials: [ClientCredentials] = []
@@ -51,7 +52,8 @@ public extension Content {
         return try await self.delete(
             client,
             uri: uri,
-            headers: headers
+            headers: headers,
+            timeout: timeout
         )
         .validate(type: NoError.self)
         .value(using: JSONDecoder.mongoDecoder)
@@ -63,6 +65,7 @@ public extension Content {
         user: User? = nil,
         headers: HTTPHeaders,
         server: ServerRepo,
+        timeout: Int64 = 60,
         path: CustomStringConvertible
     ) async throws -> T {
         var authCredentials: [ClientCredentials] = []
@@ -81,7 +84,8 @@ public extension Content {
             client,
             uri: uri,
             headers: headers,
-            contentEncoder: JSONEncoder.mongoEncoder
+            contentEncoder: JSONEncoder.mongoEncoder,
+            timeout: timeout
         )
         .validate(type: NoError.self)
         .value(using: JSONDecoder.mongoDecoder)
@@ -93,6 +97,7 @@ public extension Content {
         user: User? = nil,
         headers: HTTPHeaders,
         server: ServerRepo,
+        timeout: Int64 = 60,
         path: CustomStringConvertible
     ) async throws -> Self {
         var authCredentials: [ClientCredentials] = []
@@ -106,7 +111,7 @@ public extension Content {
         
         let headers = try server.requestAuthHeaders(headers: headers, credentials: authCredentials)
         let uri = server.uri(path: path)
-        return try await Self.get(client, uri: uri, headers: headers)
+        return try await Self.get(client, uri: uri, headers: headers, timeout: timeout)
             .validate(type: NoError.self)
             .value(using: JSONDecoder.mongoDecoder)
     }
@@ -117,6 +122,7 @@ public extension Content {
         user: User? = nil,
         headers: HTTPHeaders,
         server: ServerRepo,
+        timeout: Int64 = 60,
         path: CustomStringConvertible
     ) async throws -> T {
         var authCredentials: [ClientCredentials] = []
@@ -130,7 +136,7 @@ public extension Content {
         let headers = try server.requestAuthHeaders(headers: headers, credentials: authCredentials)
         let uri = server.uri(path: path)
         
-        return try await self.get(client, uri: uri, headers: headers)
+        return try await self.get(client, uri: uri, headers: headers, timeout: timeout)
             .validate(type: NoError.self)
             .value(using: JSONDecoder.mongoDecoder)
     }
