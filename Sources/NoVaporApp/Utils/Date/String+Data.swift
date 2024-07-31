@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension String {
+public extension String {
     
     var base64Data: Data? {
         Data(base64Encoded: self)
