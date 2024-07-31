@@ -10,9 +10,9 @@ import Vapor
 
 public final class ListResponse<T: Content>: Content {
     
-    var items: [T]?
+    public var items: [T]?
     
-    init(items: [T]? = nil) {
+    public init(items: [T]? = nil) {
         self.items = items
     }
 }
