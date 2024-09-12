@@ -60,7 +60,11 @@ private extension ServerSignInController {
         
         let user = try await signedInUser(db: db, user: requestUser, app: app)
         let credentials = try await user.recreateCredentials(
-            db: db, deviceName: deviceName, serverAppIdentifier: app.identifier, clientAppIdentifier: appId)
+            db: db,
+            deviceName: deviceName,
+            serverAppIdentifier: app.identifier,
+            clientAppIdentifier: appId
+        )
         
         return (user, credentials)
     }

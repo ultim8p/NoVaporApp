@@ -20,9 +20,11 @@ public final class NoVaporApp {
     
     public var noSignInKit: NoSignInKit?
     
-    public init(appId: String, app: Application) {
+    public init(appId: String, app: Application) async throws {
         self.appId = appId
         self.app = app
+        
+        try await createIndexes()
         
         app.middleware = .init()
         app.middleware.use(NoErrorMiddleware.default(environment: app.environment))
@@ -44,6 +46,18 @@ public final class NoVaporApp {
     public func addUserSignIn(serverRepo: ServerRepo, authRoutes: RoutesBuilder) {
         noSignInKit = NoSignInKit(appId: appId, client: app.client, serverRepo: serverRepo)
         noSignInKit?.registerAuthRoutes(authRoutes)
+    }
+}
+
+// MARK: - DB Indexing
+
+extension NoVaporApp {
+    
+    func createIndexes() async throws {
+        let db = app.mongoDB
+        try await AppUser.createIndexes(in: db)
+        try await User.createIndexes(in: db)
+        try await NoServerAuth.createIndexes(in: db)
     }
 }
 

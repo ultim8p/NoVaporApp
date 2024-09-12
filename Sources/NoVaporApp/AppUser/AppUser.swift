@@ -22,6 +22,14 @@ public final class AppUser: DBCollectionable, Content {
     public var app: ClientApp?
     
     public var user: User?
+    
+    static func createIndexes(in db: MongoDatabase) async throws {
+        let collection = AppUser.collection(in: db)
+        try await collection.createIndex(named: "app._id,user._id", keys: [
+            "app._id": 1,
+            "user._id": 1
+        ])
+    }
 }
 
 public extension AppUser {

@@ -45,7 +45,11 @@ public final class NoSignInService {
         try await AppUser.ensureExists(db: db, app: app, user: user)
         
         let credentials = try await user.recreateCredentials(
-            db: db, deviceName: deviceName, serverAppIdentifier: app.identifier, clientAppIdentifier: appId)
+            db: db, 
+            deviceName: deviceName,
+            serverAppIdentifier: app.identifier,
+            clientAppIdentifier: appId
+        )
         
         return (user, credentials)
     }
