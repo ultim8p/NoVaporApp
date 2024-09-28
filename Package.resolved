@@ -88,7 +88,7 @@
       "location" : "https://github.com/ultim8p/NoMongo.git",
       "state" : {
         "branch" : "main",
-        "revision" : "b2624e9023f96752b81b45728b6ab4b5dcbe7a1d"
+        "revision" : "871c145f7e333498a7dd9b2d8fc4e6c1fbbcff34"
       }
     },
     {
@@ -97,7 +97,7 @@
       "location" : "https://github.com/ultim8p/NoServerAuth.git",
       "state" : {
         "branch" : "main",
-        "revision" : "273e3f7c0d2f6c2d35784e7dbce7bf346ce73489"
+        "revision" : "ed393b1196407f174c6e42c4947c855c0edb09c4"
       }
     },
     {
@@ -195,8 +195,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio.git",
       "state" : {
-        "revision" : "9746cf80e29edfef2a39924a66731249223f42a3",
-        "version" : "2.72.0"
+        "revision" : "1b33db2dea6a64d5b619b9e888175133c6d7f410",
+        "version" : "2.73.0"
       }
     },
     {
