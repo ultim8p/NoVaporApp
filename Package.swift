@@ -17,7 +17,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/vapor/vapor.git", from: "4.83.1"),
-        .package(url: "https://github.com/orlandos-nl/MongoKitten.git", exact: "7.7.1"),
+        .package(url: "https://github.com/orlandos-nl/MongoKitten.git", from: "7.9.4"),
         .package(url: "https://github.com/ultim8p/NoCrypto.git", from: "0.0.1"),
         .package(url: "https://github.com/ultim8p/NoVaporError.git", from: "0.0.1"),
         .package(url: "https://github.com/ultim8p/NoMongo.git", from: "0.0.1"),
