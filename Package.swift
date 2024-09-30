@@ -18,11 +18,11 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/vapor/vapor.git", from: "4.83.1"),
         .package(url: "https://github.com/orlandos-nl/MongoKitten.git", exact: "7.7.1"),
-        .package(url: "https://github.com/ultim8p/NoCrypto.git", branch: "main"),
-        .package(url: "https://github.com/ultim8p/NoVaporError.git", branch: "main"),
-        .package(url: "https://github.com/ultim8p/NoMongo.git", branch: "main"),
-        .package(url: "https://github.com/ultim8p/NoServerAuth.git", branch: "main"),
-        .package(url: "https://github.com/ultim8p/NoVaporAPI.git", branch: "main"),
+        .package(url: "https://github.com/ultim8p/NoCrypto.git", from: "0.0.1"),
+        .package(url: "https://github.com/ultim8p/NoVaporError.git", from: "0.0.1"),
+        .package(url: "https://github.com/ultim8p/NoMongo.git", from: "0.0.1"),
+        .package(url: "https://github.com/ultim8p/NoServerAuth.git", from: "0.0.1"),
+        .package(url: "https://github.com/ultim8p/NoVaporAPI.git", from: "0.0.2"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.

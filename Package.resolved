@@ -1,5 +1,5 @@
 {
-  "originHash" : "d1822b7eb7b1b07f05fc73965f3cf64c9a6f5ce901d7c0f562d8b36c38e88641",
+  "originHash" : "53c7065de1c7ccc22a68cb39c2601372e420d45213262f48d97065478eaff2a4",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -69,8 +69,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ultim8p/NoCrypto.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "445f66ec7bb419144dd155deb034e92ad9212b11"
+        "revision" : "6695cbd3187460d095ae1e157182eb58f299a746",
+        "version" : "0.0.1"
       }
     },
     {
@@ -78,8 +78,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ultim8p/NoLogger.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "7029bfe2e270356d661173ece2da7ebd0459f17c"
+        "revision" : "7029bfe2e270356d661173ece2da7ebd0459f17c",
+        "version" : "0.0.1"
       }
     },
     {
@@ -87,8 +87,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ultim8p/NoMongo.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "871c145f7e333498a7dd9b2d8fc4e6c1fbbcff34"
+        "revision" : "871c145f7e333498a7dd9b2d8fc4e6c1fbbcff34",
+        "version" : "0.0.1"
       }
     },
     {
@@ -96,8 +96,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ultim8p/NoServerAuth.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "ed393b1196407f174c6e42c4947c855c0edb09c4"
+        "revision" : "4992c238ad8cf9f73e692ef040778bb180feb0d1",
+        "version" : "0.0.1"
       }
     },
     {
@@ -105,8 +105,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ultim8p/NoVaporAPI.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "ee1235abcfa8cfcdcbd02cd2ab6da983906eec67"
+        "revision" : "e2923e0db84f914dd4de65e036398e8815cfd625",
+        "version" : "0.0.2"
       }
     },
     {
@@ -114,8 +114,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ultim8p/NoVaporError.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "15adad80c5ed634d375ffd5b2d1400a6c5464d53"
+        "revision" : "15adad80c5ed634d375ffd5b2d1400a6c5464d53",
+        "version" : "0.0.1"
       }
     },
     {
